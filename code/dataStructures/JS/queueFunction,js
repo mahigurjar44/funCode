@@ -1,0 +1,34 @@
+let queue=function(){
+    this.queue=[];
+    this.value=()=>{
+        return this.queue;
+    }
+    this.enqueue=(value)=>{
+        this.queue.push(value);
+        return true;
+    }
+    this.dequeue=()=>{
+        this.queue.shift();
+        return true
+    }
+    this.size=()=>{
+        return this.queue.length;
+    }
+    this.isEmpty=()=>{
+        return this.queue.length==0;
+    }
+
+}
+
+let myQueue = new queue();
+console.log(myQueue.enqueue("m"));
+console.log(myQueue.enqueue("a"));
+console.log(myQueue.enqueue("h"));
+console.log(myQueue.enqueue("i"));
+console.log(myQueue.enqueue("a"));
+console.log(myQueue.isEmpty());
+console.log(myQueue.dequeue())
+console.log(myQueue.size());
+console.log(myQueue.value());
+console.log(myQueue.enqueue("a"));
+console.log(myQueue.isEmpty());
