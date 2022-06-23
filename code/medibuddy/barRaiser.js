@@ -34,7 +34,7 @@ Output [["abc","bca"], ["def"],
         }
         temp2.push(word);
         for(let word1 of sortstring){
-            if(word.split('').sort()===word1.split('').sort().join('')  && temp2.indexOf(word1) < 0){
+            if(word.split('').sort().join('')===word1.split('').sort().join('')  && temp2.indexOf(word1) < 0){
                 temp.push(word1);
                 temp2.push(word1);
             }
